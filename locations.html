@@ -81,10 +81,30 @@
       </ul>
       
       <div class="row">
-        <div class="large-12 columns">
+        <div class="large-8 columns">
           <ul class="inline-list">
             <li><a href="#" class="foundicon-plus"> Create a location</a></li>
             <li><a href="#" class='foundicon-inbox'> Export all leads</a></li>
+          </ul>
+        </div>
+        <div class="large-4 columns">
+          <a href="#" class="right" data-dropdown="search">Filter / Search</a>
+          <ul id="search" class="f-dropdown content" data-dropdown-content>
+            <li>
+              <select>
+                <option>State</option>
+              </select>
+            </li>
+            <li>
+              <select>
+                <option>Owner</option>
+              </select>
+            </li>
+            <li>
+              <label>Search</label>
+              <input>
+            </li>
+            <li><input type="submit" value="Filter / Search"></li>
           </ul>
         </div>
       </div>
@@ -140,6 +160,8 @@
           
         </tbody>
       </table>
+      
+      &lt;Add pager here&gt;
     </div>
     
     <div class="large-3 pull-9 columns">

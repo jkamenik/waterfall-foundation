@@ -21,10 +21,10 @@
 <body>
   <div class="row header">
     <div class="small-5 columns">
-      <h1><img src="images/partner-logos/waterfall/logo.png"></h1>
+      <h1 id='waterfall-logo'><img src="images/partner-logos/waterfall/logo.png"></h1>
     </div>
     <div class="small-5 columns">
-      <ul class="right inline-list">
+      <ul class="right inline-list" id="header-buttons">
         <li><a href="#"><img src="images/icons/header/dashboard.png">My Dashboard</a></li>
         <li><a href="#"><img src="images/icons/header/mysite.png">Corporate Site</a></li>
         <li><a href="#"><img src="images/icons/header/logout.png">Logout</a></li>
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="contain-to-grid">
-    <nav class="top-bar">
+    <nav class="top-bar" id="nav">
       <ul class="title-area">
         <li class="name"><!-- Leave this empty --></li>
 
@@ -66,18 +66,20 @@
   
   <div class='row'>
     <div class="large-9 push-3 columns">
-      <h1>Testing</h1>
+      <h1 id="content">Testing</h1>
       
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs" id="breadcrumbs">
         <li><a href="#">You</a></li>
         <li class="unavailable"><a href="#">are</a></li>
         <li class="current"><a href="#">here</a></li>
       </ul>
       
-      <div class="alert-box">This is a message box</div>
-      <div class="alert-box success">This is a success message</div>
-      <div class="alert-box alert">This is a error message</div>
-      <div class="alert-box secondary">This is a secondary message</div>
+      <div id="alerts">
+        <div class="alert-box">This is a message box</div>
+        <div class="alert-box success">This is a success message</div>
+        <div class="alert-box alert">This is a error message</div>
+        <div class="alert-box secondary">This is a secondary message</div>
+      </div>
       
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum scelerisque euismod. Pellentesque et purus congue, sollicitudin ante in, blandit erat. Etiam posuere quis enim sed molestie. Vestibulum felis odio, molestie et ipsum sed, aliquam rhoncus nunc. Ut sit amet enim metus. Nullam varius, mauris aliquet pulvinar molestie, turpis est faucibus felis, vel condimentum arcu sem laoreet quam. Vivamus non fringilla turpis. Cras posuere, tortor et semper varius, risus velit facilisis ante, in varius mauris risus et turpis. Nam nec laoreet lacus. Duis pulvinar erat eget nunc sodales, sit amet rhoncus elit sodales. Pellentesque nec odio in sapien malesuada tincidunt. Vestibulum ut orci tempus, posuere orci ac, consequat sem. Phasellus lorem nisl, condimentum non vestibulum ac, porttitor ut arcu. Mauris in viverra massa. Integer nisl nulla, vestibulum sed leo quis, sodales malesuada sapien. Ut lacinia at orci in scelerisque.</p>
 
@@ -90,7 +92,7 @@
       <p>In et imperdiet diam. Sed eget metus nunc. Nulla luctus vulputate ligula, consectetur euismod dui dictum sit amet. Proin quis risus elementum, laoreet tellus sit amet, sodales libero. In sodales augue sit amet turpis sodales porttitor. Nulla ut pellentesque turpis, in elementum elit. Mauris elit sem, laoreet vitae rutrum vel, congue eget dui. Donec non sem lacus. Donec at urna elit. Pellentesque luctus dictum velit fringilla aliquet. Praesent non odio velit.</p>
     </div>
     
-    <div class="large-3 pull-9 columns">
+    <div class="large-3 pull-9 columns" id="sidebar">
       <div class="show-for-small"><hr></div>
       
       <p></p>
@@ -121,8 +123,49 @@
     </div>
   </div>
   
+  <!-- The joyride -->
+  <ol class="joyride-list" data-joyride>
+    <li data-text="Next">
+      <h4>Welcome!</h4>
+      <p>Welcome to the demo. Let's highlight some areas.</p>
+      <p>Oh, and BTW we could this feature to help users out as well!</p>
+    </li>
+    <li data-text="Next" data-id="waterfall-logo">
+      <h4>Waterfall Logo</h4>
+      <p>This would change based on the OEM.</p>
+    </li>
+    <li data-text="Next" data-id="header-buttons">
+      <h4>Header links</h4>
+      <p>Ignore the icons.  Waterfall icons are meant for a specific background color which hasn't translated yet.</p>
+    </li>
+    <li data-text="Next" data-id="nav">
+      <h4>New Navigation</h4>
+      <p>It supports submenu navigation like existing waterfall, but the coolest thing is when you make the site smaller.  The entirely changes to fit the smaller screen!</p>
+      <p>When you are done, try resizing your browser window.</p>
+      <p>Or better yet try this site in an iPhone!</p>
+    </li>
+    <li data-text="Next" data-id="sidebar">
+      <h4>Sidebar</h4>
+      <p>Shows standard info beside the main content.</p>
+      <p>Until you make the screen small, then it moves below the content and adds a separator</p>
+    </li>
+    <li data-text="Next" data-id="content">
+      <h4>Content</h4>
+      <p>The main content displays here.</p>
+    </li>
+    <li data-text="Next" data-id="breadcrumbs">
+      <h4>Breadcrumbs</h4>
+      <p>Some of our pages have breadcrumbs.  And they are already styled.</p>
+    </li>
+    <li data-text="Next" data-id="alerts">
+      <h4>Alerts</h4>
+      <p>Here is how success/failure and system alerts can be displayed.</p>
+    </li>
+  </ol>
+  
   <script>
     $(document).foundation();
+    $(document).foundation('joyride', 'start');
   </script>
 </body>
 </html>
